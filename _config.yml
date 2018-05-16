@@ -27,6 +27,13 @@ theme: minima
 plugins:
   - jekyll-feed
 
+header_pages:
+  - about.md
+  - index.md
+
+disqus:
+  shortname: journey-on-big-data-and-cloud.disqus.com
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
