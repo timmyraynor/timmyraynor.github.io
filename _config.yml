@@ -39,7 +39,7 @@ comments:
       type: date
       options:
         format: "timestamp-seconds"
-  moderation: true
+  moderation: false
   name: "eduardoboucas.com"
   path: "_data/comments/{options.slug}"
   requiredFields: ["name", "email", "message"]
