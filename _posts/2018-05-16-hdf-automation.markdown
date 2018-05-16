@@ -2,7 +2,7 @@
 layout: post
 title:  "HDF(Hortonworks Data Flow) Automation with Ansible"
 date:   2018-05-16 05:53:12 +0000
-categories: HDF, Hortonworks, NiFi
+categories: HDF
 ---
 ## NiFi and HDF
 NiFi and HDF have become really hot in "Data Streaming", "Data Pipeline" domains. And with the impact from Cloud providers serverless services, having your own on-prim infrastructure and maintain it becomes more and more difficult.
