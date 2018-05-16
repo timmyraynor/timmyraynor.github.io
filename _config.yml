@@ -32,7 +32,7 @@ header_pages:
   - index.md
 
 disqus:
-  shortname: journey-on-big-data-and-cloud.disqus.com
+  shortname: journey-on-big-data-and-cloud
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
