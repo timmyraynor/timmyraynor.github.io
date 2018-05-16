@@ -109,4 +109,47 @@ We used a similar approach to reach this goal, with `Anible` on top of the bluep
 
 
 ### HDF Cluster Configuration Management
+As all configurations are managed by Ambari, if changes are made outside of Ambari cluster configuration, it might leads to Ambari original config overrides the changes. Hence to do proper configuration management over the HDF cluster, all changes via Ambari configurations might be suggested.
 
+To enable this, there are few modules created for ambari configurations updates and service restarts. Please refer to the github repository [ansible-ambari-configuration-module], this module could provide a simple ansible task to configure certain Ambari configurations like below:
+
+    - name: Configure Ambari
+      ambari_cluster_config:
+        host: 172.17.0.3
+        port: 8080
+        username: admin
+        password: admin
+        cluster_name: my_cluster
+        config_type: kafka-broker
+        ignore_secret: true
+        timeout_sec: 1
+        config_map:
+          log.retention.hours:
+            value: 150
+
+And then you could use another module to restart all / partial services:
+
+    - name: Configure Ambari
+      ambari_service_control:
+        host: 172.17.0.3
+        port: 8080
+        username: admin
+        password: admin
+        cluster_name: my_cluster
+        service: all
+        state: installed
+
+    - name: Configure Ambari
+      ambari_service_control:
+        host: 172.17.0.3
+        port: 8080
+        username: admin
+        password: admin
+        cluster_name: my_cluster
+        service: all
+        state: started
+
+
+Please note that, since the blueprint variables are not really *under control* by an idempotent way, e.g. ranger db endpoint may change in the future and this db endpoint config is only used in the ambari blueprint host_map.json file, you might create another ansible `audit playbook` using the above modules to replicate whatever changes you put into ambari blueprint host_map.json file.
+
+[ansible-ambari-configuration-module]: https://github.com/timmyraynor/ansible-ambari-config-module
