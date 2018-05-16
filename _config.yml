@@ -24,7 +24,7 @@ github_username:  timmyraynor
 
 # Build settings
 markdown: kramdown
-theme: jekyll-athena
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
