@@ -50,6 +50,8 @@ As we were working on AWS, we have something extra like:
 Ambari is a management tool for you to manage what Hadoop services you want to install and how you want them to be installed into your cluster. A simple architecture graph from the [HWX official website] says a million words:
 ![Ambari Architecture from https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.0.0/bk_ambari-operations/content/architecture.html]({{ "/assets/architecture_no_gang.png" | absolute_url}})
 
+[HWX official website]: https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.0.0/bk_ambari-operations/content/architecture.html
+
 ##### ambari-server setup
 Ansible could help install `ambari-server` and `ambari-agent` into your server and agent nodes. But there will be a *GOTCHA* as `ambari-server setup` seems not working in non-interative mode. There was a post talking about using following options:
 
