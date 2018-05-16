@@ -53,7 +53,6 @@ Ambari is a management tool for you to manage what Hadoop services you want to i
 
 [HWX official website]: https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.0.0/bk_ambari-operations/content/architecture.html
 
-##### ambari-server setup
 Ansible could help install `ambari-server` and `ambari-agent` into your server and agent nodes. But there will be a *GOTCHA* as `ambari-server setup` seems not working in non-interative mode. There was a post talking about using following options:
 
     --database={{ ambari_server_db_type }} \
@@ -86,8 +85,6 @@ What about **passwords**? It turns out that Ambari just store them into a file i
         regexp: "^server.jdbc.rca.user.passwd="
         line: "server.jdbc.rca.user.passwd=/etc/ambari-server/conf/password.dat"
 
-##### The hostname lookup in Route 53
-TBD
 
 After tackling these major issues, your Ambari cluster should run like a charm.
 
