@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "HDF(Hortonworks Data Flow) Automation with Ansible"
 date:   2018-05-16 05:53:12 +0000
 categories: HDF
