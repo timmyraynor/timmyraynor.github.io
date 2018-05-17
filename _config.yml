@@ -41,6 +41,8 @@ author:
   bio              : "Lazy people makes the world better."
   location         : "Melbourne"
   email            : "qinyujue@gmail.com"
+  github           : "timmyraynor"
+  linkedin         : "tim-qin-40753464"
 
 include:
   - .htaccess
