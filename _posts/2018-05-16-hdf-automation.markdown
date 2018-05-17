@@ -2,7 +2,14 @@
 layout: single
 title:  "HDF(Hortonworks Data Flow) Automation with Ansible"
 date:   2018-05-16 05:53:12 +0000
-categories: HDF
+categories: 
+  - HDF
+  - Ansible
+tags:
+  - NiFi
+  - HDF
+  - Ansible
+  - Automation
 comments: true
 ---
 # HDF(Hortonworks Data Flow) Automation with Ansible
