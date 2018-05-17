@@ -37,7 +37,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 author:
   name             : "Tim Qin"
-  avatar           : "/assets/avartar.jpeg"
+  avatar           : "/assets/avartar.jpg"
   bio              : "Lazy people makes the world better."
   location         : "Melbourne"
   email            : "qinyujue@gmail.com"
