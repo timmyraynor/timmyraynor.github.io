@@ -98,6 +98,8 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-seo-tag
+  
+words_per_minute: 150
 
 # mimic GitHub Pages with --safe
 whitelist:
