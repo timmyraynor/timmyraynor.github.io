@@ -152,6 +152,11 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
+
+comments:
+  provider               :  "disqus" # "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  disqus:
+    shortname            : https-github-com-timmyraynor-timmyraynor-github-io
