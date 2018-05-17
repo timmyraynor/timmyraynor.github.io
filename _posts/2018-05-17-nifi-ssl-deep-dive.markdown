@@ -47,14 +47,14 @@ The DN in your certificate will be automatically generate following the pattern 
 
     <DN Prefix> + <node FQDN> + <DN Suffix>
 
-Which means the beginning `,` in the Suffix is also important. As each node has their own FQDN (Full Qualified Domain Name), the generated certificate would be different for each node.
+Which means the beginning `,` in the Suffix is also important. As each node has its own FQDN (Full Qualified Domain Name), the generated certificate would be different for each node.
 
 ### Truststore: cert about 'Who I trust'
 When NiFi node trying to communicate with other nodes (within the cluster or outside the cluster, e.g. NiFi site-to-site), the DN of the cert in the node's keystore will be recognized as it's ID. 
 
 But how other nodes trust this is the real ID? That's when the *truststore* comes into play. 
 
-As the RootCA (e.g. NiFi CA) certificate is imported into the *truststore* in the every node within the cluster (if outside the cluster like NiFi site-to-site over SSL, the other NiFis' CA certificate needs to be imported into *truststore* as well). Nodes holding the CA signed certificates will be trusted as well.
+As the RootCA (e.g. NiFi CA) certificate is imported into the *truststore* in every node within the cluster (or outside the cluster, e.g. NiFi site-to-site over SSL, then those NiFis' CA certificate(s) will also need to be imported into *truststore*). Nodes holding the CA signed certificates will be trusted as well.
 
 From the schema above, each node will know that other nodes with DN names like: `CN=nifiXX.exampledomian.com, OU=NiFi` are certificated by the RootCA which is trusted in the truststore.
 
