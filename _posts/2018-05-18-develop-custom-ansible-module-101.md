@@ -9,7 +9,7 @@ tags:
   - Automation
 comments: true
 ---
-# Why Repeat This
+# Why Repeating This
 To be honest, I understand there are tones of tutorials (including the [Official one]) out there talking thoroughly about how to do Ansible modules. For what you will get here, is a quick **get start** tutorial and "I just want to have a module built".
 
 [Official one]: http://docs.ansible.com/ansible/latest/dev_guide/developing_modules.html
