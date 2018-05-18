@@ -62,7 +62,7 @@ The `AnsibleModule` above provides the lifecycle of extracting yaml playbook par
 - `_ansible_no_log`
 - `_ansible_debug`
 - `_ansible_diff`
-...
+- ...
 
 So how we initiate the module? You just need to tell the module what parameters you are expecting. Like below from my custom Ansible Ambari module:
 
