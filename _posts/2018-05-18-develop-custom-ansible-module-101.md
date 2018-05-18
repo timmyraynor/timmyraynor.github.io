@@ -22,7 +22,7 @@ As we always need to check before move on:
 
 Ok, if the above answer is: I need an Ansible Module, then you must needs:
 
-    An idempotent way to deal with my automation process (otherwise I will *shell/command* it)
+  - An idempotent way to deal with my automation process (otherwise I will *shell/command* it)
 
 ## What we need for an Ansible Module
 You have used Ansible before, and you probably get used to the Ansible concepts and had a guess about what you need for your module, here I am taking an example of when I try to develop an [Ansible Ambari Configure module] via Ambari API + Python, so I need:
