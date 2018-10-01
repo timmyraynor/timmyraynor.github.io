@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Kerberos All-In-One Image"
+title:  "Kerberos All-In-One Picture"
 date:   2018-09-27 17:23:12 +0000
 categories: 
   - Kerberos
