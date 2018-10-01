@@ -21,6 +21,8 @@ Kerberos, in my understanding, is to establish a trust connection between an aut
 ## 2 Entire Flow
 ![Automation Stack]({{ "/assets/kerberos-flow.png" | absolute_url }})
 
+* Note: the colour of the key is matching with the lock on the message, meaning who ever owns the right colour key could unpack the *locked up* message with the same colour.
+
 As you could see from the above flow, the pattern is quite simple.
 
 1. Intermediate services (Authenitcation Service / Ticketing Service) is holding the trust credentials of both parties who are requesting for communication.
