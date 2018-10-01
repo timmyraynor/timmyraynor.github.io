@@ -11,14 +11,14 @@ tags:
   - KDC
 comments: true
 ---
-## Key Exchange in Kerberos
+## 1 Key Exchange in Kerberos
 Kerberos, in my understanding, is to establish a trust connection between an authenticated user and a existing service in the realm:
 
 1. Are you a trusted user?
 2. Is the service a trusted service?
 3. How to build a session based connection channel between the user and the service?
 
-## Entire Flow
+## 2 Entire Flow
 ![Automation Stack]({{ "/assets/kerberos-flow.png" | absolute_url }})
 
 As you could see from the above flow, the pattern is quite simple.
@@ -30,7 +30,7 @@ As you could see from the above flow, the pattern is quite simple.
     - Each party would have their key to unpack the package that holds the right session key.
 3. Both parties using the new session key to communicate.
 
-### Authentication Server to User
+### 2.1 Authentication Server to User
 As we summarized from above, you could find the redline drawed top down will include the separation mentioned in pattern 2 above:
 
 ![Automation Stack]({{ "/assets/kerberos-pattern1.png" | absolute_url }})
