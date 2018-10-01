@@ -57,7 +57,7 @@ Ansible provide a straight forward **new Python Module**, they call it the Ansib
 
     from ansible.module_utils.basic import AnsibleModule
 
-The `AnsibleModule` above provides the lifecycle of extracting yaml playbook parameters and all fancy operations like parsing an input like `value: {{lookup('template','./files/mytemplate'}}`, then it execute the custom logic you specified and gather the change status for you in the end. It also attached few global options through like:
+The `AnsibleModule` above provides the life-cycle of extracting yaml playbook parameters and all fancy operations like parsing an input like `value: {{lookup('template','./files/mytemplate'}}`, then it execute the custom logic you specified and gather the change status for you in the end. It also attached few global options through like:
 
 - `_ansible_no_log`
 - `_ansible_debug`
@@ -84,7 +84,7 @@ So how we initiate the module? You just need to tell the module what parameters 
         argument_spec=argument_spec
     )
 
-Done, your ansible module is initated and the helper function `ansible.module_utils.basic._load_params()` will also be called to gather your stdin parameters and set them into global varibles. How do I get all these declared module?
+Done, your ansible module is initiated and the helper function `ansible.module_utils.basic._load_params()` will also be called to gather your stdin parameters and set them into global variables. How do I get all these declared module?
 
 It's easy:
 
@@ -105,14 +105,14 @@ Now you have it. You could also putting Jinja2 template in your yaml like the fa
 ### What's My Current Status
 Unlike **Terraform**, Ansible does not have any state files - it queries the status on the fly. So you need to create a current status query. In my case, I am just writing an API call to ask the current status of the Ambari Configurations.
 
-With the beatiful `requests` package in Python, I just need to do things like:
+With the beautiful `requests` package in Python, I just need to do things like:
 
     r = get(ambari_url, user, password,
               '/api/v1/clusters/{0}?fields=Clusters/desired_configs'.format(cluster_name), connection_timeout)
     try:
         assert r.status_code == 200
     except AssertionError as e:
-        e.message = 'Coud not get cluster desired configuration: request code {0}, \
+        e.message = 'Could not get cluster desired configuration: request code {0}, \
                     request message {1}'.format(r.status_code, r.content)
         raise
     cluster_config = json.loads(r.content)
@@ -180,9 +180,3 @@ You could provide `extra libraries` to you ansible playbook, I just put it into 
      library=./extra_modules
 
 This tells ansible to load extra libraries from the folder `extra_modules`, and you could put your modules there, it should be loaded when you run you playbook.
-
-
-    
-
-
-    

@@ -28,7 +28,7 @@ Within the image there are few components:
 - NiFi nodes truststore
 - CA private key & CA cert
 
-There's already a lot of blogs/threads talking about how to setup NiFi SSL and how SSL/TLS works, here I want to focus on the schema only for bettern understanding, you could find more step-by-step referenes from HCC link below:
+There's already a lot of blogs/threads talking about how to setup NiFi SSL and how SSL/TLS works, here I want to focus on the schema only for better understanding, you could find more step-by-step references from HCC link below:
 
 - https://community.hortonworks.com/articles/17293/how-to-create-user-generated-keys-for-securing-nif.html
 
@@ -62,7 +62,7 @@ From the schema above, each node will know that other nodes with DN names like: 
 I really cannot remember where I got this reference image but please refer to this image as all the support schemas of authentication:
 ![SSL Auth Schema]({{ "/assets/authentication-schema.png" | absolute_url}})
 
-As you could see, if we setup the NiFi node to be username / password login, LDAP could be then integrated following such schema. But then what's the ID looks like? 
+As you could see, if we setup the NiFi node to be username / password login, LDAP could be then integrated following such schema. But then what's the ID looks like?
 
 If you login via LDAP, then no certificate would be used to do the authentication, NiFi and LDAP would communicate their own trust schema. But user will still get a DN name after LDAP login so that that could be used to identify who are you and associate access control policies to this ID by NiFi.
 

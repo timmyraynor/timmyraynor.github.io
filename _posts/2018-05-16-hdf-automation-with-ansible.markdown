@@ -15,10 +15,10 @@ comments: true
 ## NiFi and HDF
 NiFi and HDF have become really popular in "Data Streaming", "Data Pipeline" domains. And with the impact from Cloud providers serverless services, having your own on-prim infrastructure and maintain it becomes more and more difficult.
 
-In one of the Big Data project, *Automation* is the keyword to control the maintainence cost of an on-prim HDF cluster within a reasonable range. So far **Ansible** has won a great position in automation orchestration tools hence it is also our choice for automating on-prim HDF cluster deployment.
+In one of the Big Data project, *Automation* is the keyword to control the maintenance cost of an on-prim HDF cluster within a reasonable range. So far **Ansible** has won a great position in automation orchestration tools hence it is also our choice for automating on-prim HDF cluster deployment.
 
 ## Ansible
-**Ansible** is famous for the **idempotent** feature as you set your target state in the ansible playbook and ansible will try to reach that target state for you. Main differences between a shell script is you can savely run your ansible playbook multiple times with a progressive delta everytime there's a need of change, which would be very tricky to reach the same goal on Shell scripts.
+**Ansible** is famous for the **idempotent** feature as you set your target state in the ansible playbook and ansible will try to reach that target state for you. Main differences between a shell script is you can safely run your ansible playbook multiple times with a progressive delta every time there's a need of change, which would be very tricky to reach the same goal on Shell scripts.
 
 You could find more about Ansible over [here] or a [quick-start-video]
 
@@ -47,7 +47,7 @@ Common OS preparation tasks including:
 
 - YUM packages and repo setup
 - Python packages
-- Particular components setup (e.g. JDK JCE policy setup as a mandantory tick for HDF installation)
+- Particular components setup (e.g. JDK JCE policy setup as a mandatory tick for HDF installation)
 
 As we were working on AWS, we have something extra like:
 
@@ -109,7 +109,7 @@ When you include those configurations into your Ambari blueprint **host_map.json
 
 [Ambari blueprint playbook]: https://github.com/hortonworks/ansible-hortonworks
 
-We used a similar approach to reach this goal, with **Ansible** on top of the blueprint *templates*, we could use **Ansible** to manage the configurations and passwords. These changes could either be within an *Ansible Vault* file or *Ansible Tower*(or *AWX* for the opensource version).
+We used a similar approach to reach this goal, with **Ansible** on top of the blueprint *templates*, we could use **Ansible** to manage the configurations and passwords. These changes could either be within an *Ansible Vault* file or *Ansible Tower*(or *AWX* for the open source version).
 
 
 ### HDF Cluster Configuration Management
