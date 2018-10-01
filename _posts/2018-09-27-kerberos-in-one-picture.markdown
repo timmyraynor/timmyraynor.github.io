@@ -19,7 +19,7 @@ Kerberos, in my understanding, is to establish a trust connection between an aut
 3. How to build a session based connection channel between the user and the service?
 
 ## 2 Entire Flow
-![Automation Stack]({{ "/assets/kerberos-flow.png" | absolute_url }})
+![Automation Stack]({{ "/assets/kerberos-flow-1-shot.png" | absolute_url }})
 
 * Note: the colour of the key is matching with the lock on the message, meaning who ever owns the right colour key could unpack the *locked up* message with the same colour.
 
